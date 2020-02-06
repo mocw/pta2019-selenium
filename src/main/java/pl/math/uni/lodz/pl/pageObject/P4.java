@@ -19,7 +19,7 @@ public class P4 {
     private LocalDateTime now;
 
     public P4(){
-        inputDate = ChromeDriver.getInstance().getDriver().findElement(By.xpath("//input[@placeholder='dd/mm/yyyy']"));
+        inputDate = ChromeDriver.getDriver().findElement(By.xpath("//input[@placeholder='dd/mm/yyyy']"));
         dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         now = LocalDateTime.now();
         today = dtf.format(now);
@@ -47,8 +47,11 @@ public class P4 {
     }
 
     public String addDaysToToday(long days){
-        now = now.plusDays(days);
-        String newDate = dtf.format(now);
+        String newDate = dtf.format(now.plusDays(days));
         return newDate;
+    }
+
+    public String getInputValue(){
+        return inputDate.getAttribute("value");
     }
 }
