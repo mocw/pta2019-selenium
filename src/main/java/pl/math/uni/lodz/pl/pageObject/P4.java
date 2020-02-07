@@ -14,12 +14,16 @@ public class P4 {
     private WebElement inputDate;
     private WebElement btnToday;
     private WebElement btnClear;
+    private WebElement btnDisplayCallendar;
     private String today;
     private DateTimeFormatter dtf;
     private LocalDateTime now;
 
     public P4(){
         inputDate = ChromeDriver.getDriver().findElement(By.xpath("//input[@placeholder='dd/mm/yyyy']"));
+        btnDisplayCallendar = ChromeDriver.getDriver().findElement(By.xpath("//i[contains(@class,'glyphicon glyphicon-th')]"));
+        btnDisplayCallendar.click();
+        btnToday = ChromeDriver.getDriver().findElement(By.xpath("//th[contains(text(), 'Today')]"));
         dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         now = LocalDateTime.now();
         today = dtf.format(now);
@@ -42,10 +46,6 @@ public class P4 {
         inputDate.sendKeys(date);
     }
 
-    public String getInputDate(){
-        return inputDate.getText();
-    }
-
     public String addDaysToToday(long days){
         String newDate = dtf.format(now.plusDays(days));
         return newDate;
@@ -53,5 +53,13 @@ public class P4 {
 
     public String getInputValue(){
         return inputDate.getAttribute("value");
+    }
+
+    public void btnTodayClick(){
+        btnToday.click();
+    }
+
+    public void setBtnDisplayCallendarClick(){
+        btnDisplayCallendar.click();
     }
 }
