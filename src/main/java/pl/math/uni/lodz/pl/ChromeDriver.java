@@ -2,9 +2,10 @@ package pl.math.uni.lodz.pl;
 
 import org.openqa.selenium.WebDriver;
 
+import static java.lang.Thread.sleep;
+
 public class ChromeDriver{
-    private static WebDriver driver = new org.openqa.selenium.chrome.ChromeDriver();;
-    private static ChromeDriver chromeDriver = new ChromeDriver();
+    private static WebDriver driver = new org.openqa.selenium.chrome.ChromeDriver();
     private ChromeDriver() {}
 
     public static void navigate(String url){
@@ -17,7 +18,8 @@ public class ChromeDriver{
 
     public static void await(){
         try{
-            Thread.sleep(1000);
+
+            sleep(1000);
         }
         catch(Exception e){
             System.out.println(e.getMessage());

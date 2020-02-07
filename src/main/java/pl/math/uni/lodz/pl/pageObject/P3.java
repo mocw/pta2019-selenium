@@ -10,17 +10,21 @@ public class P3 {
     private WebElement rbElement;
     private WebElement resultText;
     private List<WebElement> chkBoxes;
-    private WebElement checkAllButton;
+    private WebElement checkUncheckAllButton;
 
     public P3(){
         this.rbElement = ChromeDriver.getDriver().findElement(By.xpath("//input[@id='isAgeSelected']"));
         this.resultText = ChromeDriver.getDriver().findElement(By.xpath("//div[@id='txtAge']"));
         this.chkBoxes = ChromeDriver.getDriver().findElements(By.xpath("//input[@class='cb1-element']"));
-        this.checkAllButton = ChromeDriver.getDriver().findElement(By.xpath("//input[@id='check1']"));
+        this.checkUncheckAllButton = ChromeDriver.getDriver().findElement(By.xpath("//input[@id='check1']"));
     }
 
     public WebElement getRbElement() {
         return rbElement;
+    }
+
+    public List<WebElement> getChkBoxes() {
+        return chkBoxes;
     }
 
     public void setAllCheckBoxes(){
@@ -32,8 +36,8 @@ public class P3 {
         }
     }
 
-    public String getcheckAllButtonText(){
-        return checkAllButton.getAttribute("value");
+    public String getCheckAllButtonText(){
+        return checkUncheckAllButton.getAttribute("value");
     }
 
     public void setRbElement() {
@@ -42,6 +46,10 @@ public class P3 {
 
     public String getResultText() {
         return resultText.getText();
+    }
+
+    public void checkUncheckAllButtonClick(){
+        checkUncheckAllButton.click();
     }
 }
 
