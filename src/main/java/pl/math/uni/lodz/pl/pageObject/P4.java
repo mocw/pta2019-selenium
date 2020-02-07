@@ -19,7 +19,7 @@ public class P4 {
     private DateTimeFormatter dtf;
     private LocalDateTime now;
 
-    public P4(){
+    P4(){
         inputDate = ChromeDriver.getDriver().findElement(By.xpath("//input[@placeholder='dd/mm/yyyy']"));
         btnDisplayCallendar = ChromeDriver.getDriver().findElement(By.xpath("//i[contains(@class,'glyphicon glyphicon-th')]"));
         btnDisplayCallendar.click();

@@ -16,7 +16,7 @@ public class P5 {
 
     public boolean isDownloaded(){
         while(true){
-            if(downloadProgress.getText().toString().equals("100%")){
+            if(downloadProgress.getText().equals("100%")){
                 return true;
             }
         }
