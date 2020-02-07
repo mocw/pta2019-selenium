@@ -24,6 +24,7 @@ public class P4 {
         btnDisplayCallendar = ChromeDriver.getDriver().findElement(By.xpath("//i[contains(@class,'glyphicon glyphicon-th')]"));
         btnDisplayCallendar.click();
         btnToday = ChromeDriver.getDriver().findElement(By.xpath("//th[contains(text(), 'Today')]"));
+        btnClear = ChromeDriver.getDriver().findElement(By.xpath("//th[contains(text(), 'Clear')]"));
         dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         now = LocalDateTime.now();
         today = dtf.format(now);
@@ -59,7 +60,11 @@ public class P4 {
         btnToday.click();
     }
 
-    public void setBtnDisplayCallendarClick(){
+    public void btnDisplayCallendarClick(){
         btnDisplayCallendar.click();
+    }
+
+    public void btnClearClick(){
+        btnClear.click();
     }
 }
