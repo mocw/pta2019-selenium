@@ -148,6 +148,14 @@ public class Tests {
         page.setStatusInputValue("in progress");
         assertEquals("in progress",page.getStatusCellValue());
         page.filterButtonClick();
+        page.setFilterIdInputValue("2");
+        assertEquals("2",page.getIdFilterCell());
+        page.setFilterUsernameInputValue("mar");
+        assertEquals("markino",page.getUsernameFilterCell());
+        page.setFilterFirstNameInputValue("Daniel");
+        assertEquals("Daniel",page.getFirstNameFilterCell());
+        page.setFilterLastNameInputValue("Dima");
+        assertEquals("Dimarison",page.getFilterLastNameCell());
     }
 
 //    @Test

@@ -12,6 +12,14 @@ public class P8 {
     private WebElement assigneeCell;
     private WebElement statusCell;
     private WebElement filterButton;
+    private WebElement filterIdInput;
+    private WebElement filterUsernameInput;
+    private WebElement filterFirstNameInput;
+    private WebElement filterLastNameInput;
+    private WebElement idFilterCell;
+    private WebElement usernameFilterCell;
+    private WebElement firstNameFilterCell;
+    private WebElement lastNameFilterCell;
     private String tdValue;
     private String tdXpath;
 
@@ -21,6 +29,14 @@ public class P8 {
         tdXpath = "//*[@id=\"task-table\"]/tbody/tr/td";
         filterButton = ChromeDriver.getDriver()
                 .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/div/div/button"));
+        filterIdInput = ChromeDriver.getDriver()
+                .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/table/thead/tr/th[1]/input"));
+        filterUsernameInput = ChromeDriver.getDriver()
+                .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/table/thead/tr/th[2]/input"));
+        filterFirstNameInput = ChromeDriver.getDriver()
+                .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/table/thead/tr/th[3]/input"));
+        filterLastNameInput = ChromeDriver.getDriver()
+                .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/table/thead/tr/th[4]/input"));
     }
 
     private void updateTdValue(String value){
@@ -30,29 +46,32 @@ public class P8 {
                 .findElement(By.xpath(tdXpath));
     }
 
+    private void updateFilterTdValue(String value){
+        tdValue = value;
+        tdXpath = "/html/body/div[2]/div/div[2]/div[2]/div/table/tbody/tr/td[contains(text(), '" + tdValue +"')]";
+        idFilterCell = usernameFilterCell = firstNameFilterCell = lastNameFilterCell =  ChromeDriver.getDriver()
+                .findElement(By.xpath(tdXpath));
+    }
+
     public void setIdInputValue(String id){
-        tdValue = id;
         updateTdValue(id);
         inputSearchBox.clear();
         inputSearchBox.sendKeys(id);
     }
 
     public void setTaskInputValue(String task){
-        tdValue = task;
         updateTdValue(task);
         inputSearchBox.clear();
         inputSearchBox.sendKeys(task);
     }
 
     public void setAssigneeInputValue(String assignee){
-        tdValue = assignee;
         updateTdValue(assignee);
         inputSearchBox.clear();
         inputSearchBox.sendKeys(assignee);
     }
 
     public void setStatusInputValue(String status){
-        tdValue = status;
         updateTdValue(status);
         inputSearchBox.clear();
         inputSearchBox.sendKeys(status);
@@ -78,4 +97,39 @@ public class P8 {
         return statusCell.getText();
     }
 
+    public void setFilterIdInputValue(String id){
+        updateFilterTdValue(id);
+        filterIdInput.sendKeys(id);
+    }
+
+    public void setFilterUsernameInputValue(String username){
+        updateFilterTdValue(username);
+        filterUsernameInput.sendKeys(username);
+    }
+
+    public void setFilterFirstNameInputValue(String firstName){
+        updateFilterTdValue(firstName);
+        filterFirstNameInput.sendKeys(firstName);
+    }
+
+    public void setFilterLastNameInputValue(String lastName){
+        updateFilterTdValue(lastName);
+        filterLastNameInput.sendKeys(lastName);
+    }
+
+    public String getIdFilterCell(){
+        return idFilterCell.getText();
+    }
+
+    public String getUsernameFilterCell() {
+        return usernameFilterCell.getText();
+    }
+
+    public String getFirstNameFilterCell() {
+        return firstNameFilterCell.getText();
+    }
+
+    public String getFilterLastNameCell() {
+        return lastNameFilterCell.getText();
+    }
 }
