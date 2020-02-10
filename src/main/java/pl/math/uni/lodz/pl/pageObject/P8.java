@@ -11,6 +11,7 @@ public class P8 {
     private WebElement taskCell;
     private WebElement assigneeCell;
     private WebElement statusCell;
+    private WebElement filterButton;
     private String tdValue;
     private String tdXpath;
 
@@ -18,6 +19,8 @@ public class P8 {
         inputSearchBox = ChromeDriver.getDriver()
                 .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/input"));
         tdXpath = "//*[@id=\"task-table\"]/tbody/tr/td";
+        filterButton = ChromeDriver.getDriver()
+                .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div/div/div/button"));
     }
 
     private void updateTdValue(String value){
@@ -53,6 +56,10 @@ public class P8 {
         updateTdValue(status);
         inputSearchBox.clear();
         inputSearchBox.sendKeys(status);
+    }
+
+    public void filterButtonClick(){
+        filterButton.click();
     }
 
     public String getIdCellValue(){

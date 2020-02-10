@@ -141,9 +141,13 @@ public class Tests {
         P8 page = new P8();
         page.setIdInputValue("1");
         assertEquals("1",page.getIdCellValue());
+        page.setTaskInputValue("jQuery library");
+        assertEquals("jQuery library",page.getTaskCellValue());
         page.setAssigneeInputValue("Mike");
         assertEquals("Mike Trout",page.getAssigneeCellValue());
-
+        page.setStatusInputValue("in progress");
+        assertEquals("in progress",page.getStatusCellValue());
+        page.filterButtonClick();
     }
 
 //    @Test
