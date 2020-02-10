@@ -18,10 +18,6 @@ public class P1{
         resultText = ChromeDriver.getDriver().findElement(By.xpath("//div[@id='user-message']/span"));
     }
 
-    public String url(){
-        return "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
-    }
-
     public WebElement getInputTextElement() {
         return inputTextElement;
     }
