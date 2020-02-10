@@ -23,8 +23,8 @@ public class P7 {
 
     public boolean isSuccessMsgHidden(){
         while(true){
-           String style = autoCloseSuccessMsgButton.getAttribute("style");
-            if(style.contains("none")){
+           String style = autoCloseSuccessMsgContent.getAttribute("style");
+            if(style.contains("display: none;")){
                 return true;
             }
         }
