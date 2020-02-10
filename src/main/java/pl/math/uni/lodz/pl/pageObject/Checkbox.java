@@ -6,13 +6,13 @@ import pl.math.uni.lodz.pl.ChromeDriver;
 
 import java.util.List;
 
-public class P3 {
+public class Checkbox {
     private WebElement rbElement;
     private WebElement resultText;
     private List<WebElement> chkBoxes;
     private WebElement checkUncheckAllButton;
 
-    public P3(){
+    public Checkbox(){
         this.rbElement = ChromeDriver.getDriver().findElement(By.xpath("//input[@id='isAgeSelected']"));
         this.resultText = ChromeDriver.getDriver().findElement(By.xpath("//div[@id='txtAge']"));
         this.chkBoxes = ChromeDriver.getDriver().findElements(By.xpath("//input[@class='cb1-element']"));

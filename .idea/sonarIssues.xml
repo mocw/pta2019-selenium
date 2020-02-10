@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/fragment.java">
           <value>
             <set />
@@ -63,6 +68,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/BasicFirstForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/BasicMultiInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/BasicSingleInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/MultiInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/P1.java">
           <value>
             <set />
@@ -109,6 +134,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/P9.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/SingleInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/pl/math/uni/lodz/pl/pageObject/basicMultiInputForm.java">
           <value>
             <set />
           </value>

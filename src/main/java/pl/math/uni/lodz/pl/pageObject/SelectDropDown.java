@@ -4,13 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pl.math.uni.lodz.pl.ChromeDriver;
 
-public class P10 {
+public class SelectDropDown {
 
     private WebElement selectBtn;
     private WebElement option;
     private WebElement resultText;
 
-    public P10(){
+    public SelectDropDown(){
         selectBtn = ChromeDriver.getDriver()
                 .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div[2]/select"));
         option = ChromeDriver.getDriver()

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pl.math.uni.lodz.pl.ChromeDriver;
 
-public class P8 {
+public class SearchFilter {
 
     private WebElement inputSearchBox;
     private WebElement idCell;
@@ -23,7 +23,7 @@ public class P8 {
     private String tdValue;
     private String tdXpath;
 
-    public P8(){
+    public SearchFilter(){
         inputSearchBox = ChromeDriver.getDriver()
                 .findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/input"));
         tdXpath = "//*[@id=\"task-table\"]/tbody/tr/td";

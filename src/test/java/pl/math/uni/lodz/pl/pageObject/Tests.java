@@ -1,5 +1,4 @@
 package pl.math.uni.lodz.pl.pageObject;
-import groovy.json.internal.Chr;
 import org.junit.*;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebElement;
@@ -20,18 +19,18 @@ public class Tests {
     }
 
     @Test
-    public void T1() {
+    public void singleInputFormTest() {
         ChromeDriver.navigate(Page.getPage() + "basic-first-form-demo.html");
-        P1 page = new P1();
+        SingleInputForm page = new SingleInputForm();
         page.setInputTextElement("testMessage");
         page.clickSubmitButton();
         assertEquals("testMessage",page.getResultText());
     }
 
     @Test
-    public void T2() {
+    public void multiInputFormTest() {
         ChromeDriver.navigate(Page.getPage() + "basic-first-form-demo.html");
-        P2 page = new P2();
+        MultiInputForm page = new MultiInputForm();
         page.setInputAField("1");
         page.setInputBField("2");
         ChromeDriver.await();
@@ -41,9 +40,9 @@ public class Tests {
     }
 
     @Test
-    public void T3(){
+    public void checkboxTest(){
         ChromeDriver.navigate(Page.getPage() + "basic-checkbox-demo.html");
-        P3 page = new P3();
+        Checkbox page = new Checkbox();
         page.setRbElement();
         assertEquals(page.getResultText(),"Success - Check box is checked");
         page.checkUncheckAllButtonClick();
@@ -64,9 +63,9 @@ public class Tests {
     }
 
     @Test
-    public void T4(){
+    public void bootstrapDatePickerTest(){
         ChromeDriver.navigate(Page.getPage() + "bootstrap-date-picker-demo.html");
-        P4 page = new P4();
+        BootstrapDatePicker page = new BootstrapDatePicker();
         page.inputDate(page.getNow());
         assertEquals(page.getInputValue(),page.getNow());
         ChromeDriver.await();
@@ -79,17 +78,17 @@ public class Tests {
     }
 
     @Test
-    public void T5() throws InterruptedException {
+    public void downloadProgressTest() throws InterruptedException {
         ChromeDriver.navigate(Page.getPage() + "bootstrap-download-progress-demo.html");
-        P5 page = new P5();
+        DownloadProgress page = new DownloadProgress();
         page.BtnStartDownloadClick();
         assertTrue(page.isDownloaded());
     }
 
     @Test
-    public void T6(){
+    public void bootstrapModalTest(){
         ChromeDriver.navigate(Page.getPage() + "bootstrap-modal-demo.html");
-        P6 page = new P6();
+        BootstrapModal page = new BootstrapModal();
         page.singleModalButtonClick();
         ChromeDriver.await();
         try{
@@ -128,18 +127,18 @@ public class Tests {
     }
 
     @Test
-    public void T7(){
+    public void bootstrapAlertTest(){
         ChromeDriver.navigate(Page.getPage() + "bootstrap-alert-messages-demo.html");
-        P7 page = new P7();
+        BootstrapAlert page = new BootstrapAlert();
         page.autoCloseSuccessMsgButtonClick();
         ChromeDriver.await();
         assertTrue(page.isSuccessMsgHidden());
     }
 
     @Test
-    public void T8(){
+    public void searchFilterTest(){
         ChromeDriver.navigate(Page.getPage() + "table-search-filter-demo.html");
-        P8 page = new P8();
+        SearchFilter page = new SearchFilter();
         page.setIdInputValue("1");
         assertEquals("1",page.getIdCellValue());
         page.setTaskInputValue("jQuery library");
@@ -160,9 +159,9 @@ public class Tests {
     }
 
     @Test
-    public void T9(){
+    public void ajaxFormSubmitTest(){
         ChromeDriver.navigate(Page.getPage() + "ajax-form-submit-demo.html");
-        P9 page = new P9();
+        AjaxFormSubmit page = new AjaxFormSubmit();
         page.setInputName("Test User");
         page.setInputComment("Test comment");
         page.setSubmitButtonClick();
@@ -170,9 +169,9 @@ public class Tests {
     }
 
     @Test
-    public void T10(){
+    public void selectDropDownTest(){
         ChromeDriver.navigate(Page.getPage() + "basic-select-dropdown-demo.html");
-        P10 page = new P10();
+        SelectDropDown page = new SelectDropDown();
         page.selectBtnClick();
         page.optionClick();
         assertEquals("Day selected :- Tuesday", page.getResultText());

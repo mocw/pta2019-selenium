@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pl.math.uni.lodz.pl.ChromeDriver;
 
-public class P7 {
+public class BootstrapAlert {
     private WebElement autoCloseSuccessMsgButton;
     private WebElement normalSuccessMsgButton;
     private WebElement autoCloseSuccessMsgContent;
-    public P7(){
+    public BootstrapAlert(){
         autoCloseSuccessMsgButton = ChromeDriver.getDriver()
                 .findElement(By.xpath("//*[@id=\"autoclosable-btn-success\"]"));
         normalSuccessMsgButton = ChromeDriver.getDriver()

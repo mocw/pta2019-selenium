@@ -5,7 +5,7 @@ import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebElement;
 import pl.math.uni.lodz.pl.ChromeDriver;
 
-public class P6 {
+public class BootstrapModal {
     private WebElement singleModalButton;
     private WebElement singleModalCloseButton;
     private WebElement multipleModalButton;
@@ -14,7 +14,7 @@ public class P6 {
     private WebElement multipleInnerModalCloseButton;
 
 
-    public P6(){
+    public BootstrapModal(){
         singleModalButton = ChromeDriver.getDriver()
                 .findElement(By.xpath("//a[contains(@href,'#myModal0')]"));
         singleModalCloseButton = ChromeDriver.getDriver()

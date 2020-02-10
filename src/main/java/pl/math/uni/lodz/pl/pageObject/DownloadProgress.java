@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pl.math.uni.lodz.pl.ChromeDriver;
 
-public class P5 {
+public class DownloadProgress {
     private WebElement btnStartDownload = ChromeDriver.getDriver()
             .findElement(By.xpath("//button[@id='cricle-btn']"));
     private WebElement downloadProgress = ChromeDriver.getDriver()

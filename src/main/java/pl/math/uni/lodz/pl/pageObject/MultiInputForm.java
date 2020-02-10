@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pl.math.uni.lodz.pl.ChromeDriver;
 
-public class P2 {
+public class MultiInputForm {
     private WebElement inputAField;
 
     private WebElement inputBField;
@@ -13,7 +13,7 @@ public class P2 {
 
     private WebElement resultText;
 
-    public P2() {
+    public MultiInputForm() {
         this.inputAField = ChromeDriver.getDriver().findElement(By.xpath("//input[@id='sum1']"));
         this.inputBField = ChromeDriver.getDriver().findElement(By.xpath("//input[@id='sum2']"));
         this.getTotalSubmitButton = ChromeDriver.getDriver().findElement(By.xpath("//form[@id='gettotal']/button"));

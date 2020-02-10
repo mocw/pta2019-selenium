@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class P4 {
+public class BootstrapDatePicker {
     private WebElement inputDate;
     private WebElement btnToday;
     private WebElement btnClear;
@@ -19,7 +19,7 @@ public class P4 {
     private DateTimeFormatter dtf;
     private LocalDateTime now;
 
-    P4(){
+    BootstrapDatePicker(){
         inputDate = ChromeDriver.getDriver().findElement(By.xpath("//input[@placeholder='dd/mm/yyyy']"));
         btnDisplayCallendar = ChromeDriver.getDriver().findElement(By.xpath("//i[contains(@class,'glyphicon glyphicon-th')]"));
         btnDisplayCallendar.click();
