@@ -19,7 +19,7 @@ public class Tests {
     }
 
     @Test
-    public void singleInputFormTest() {
+    public void singleInputForm() {
         ChromeDriver.navigate(Page.getPage() + "basic-first-form-demo.html");
         SingleInputForm page = new SingleInputForm();
         page.setInputTextElement("testMessage");
@@ -28,7 +28,7 @@ public class Tests {
     }
 
     @Test
-    public void multiInputFormTest() {
+    public void multiInputForm() {
         ChromeDriver.navigate(Page.getPage() + "basic-first-form-demo.html");
         MultiInputForm page = new MultiInputForm();
         page.setInputAField("1");
@@ -40,7 +40,7 @@ public class Tests {
     }
 
     @Test
-    public void checkboxTest(){
+    public void checkbox(){
         ChromeDriver.navigate(Page.getPage() + "basic-checkbox-demo.html");
         Checkbox page = new Checkbox();
         page.setRbElement();
@@ -63,7 +63,7 @@ public class Tests {
     }
 
     @Test
-    public void bootstrapDatePickerTest(){
+    public void bootstrapDatePicker(){
         ChromeDriver.navigate(Page.getPage() + "bootstrap-date-picker-demo.html");
         BootstrapDatePicker page = new BootstrapDatePicker();
         page.inputDate(page.getNow());
@@ -78,7 +78,7 @@ public class Tests {
     }
 
     @Test
-    public void downloadProgressTest() throws InterruptedException {
+    public void downloadProgress() throws InterruptedException {
         ChromeDriver.navigate(Page.getPage() + "bootstrap-download-progress-demo.html");
         DownloadProgress page = new DownloadProgress();
         page.BtnStartDownloadClick();
@@ -86,7 +86,7 @@ public class Tests {
     }
 
     @Test
-    public void bootstrapModalTest(){
+    public void bootstrapModal(){
         ChromeDriver.navigate(Page.getPage() + "bootstrap-modal-demo.html");
         BootstrapModal page = new BootstrapModal();
         page.singleModalButtonClick();
@@ -127,7 +127,7 @@ public class Tests {
     }
 
     @Test
-    public void bootstrapAlertTest(){
+    public void bootstrapAlert(){
         ChromeDriver.navigate(Page.getPage() + "bootstrap-alert-messages-demo.html");
         BootstrapAlert page = new BootstrapAlert();
         page.autoCloseSuccessMsgButtonClick();
@@ -136,7 +136,7 @@ public class Tests {
     }
 
     @Test
-    public void searchFilterTest(){
+    public void searchFilter(){
         ChromeDriver.navigate(Page.getPage() + "table-search-filter-demo.html");
         SearchFilter page = new SearchFilter();
         page.setIdInputValue("1");
@@ -159,7 +159,7 @@ public class Tests {
     }
 
     @Test
-    public void ajaxFormSubmitTest(){
+    public void ajaxFormSubmit(){
         ChromeDriver.navigate(Page.getPage() + "ajax-form-submit-demo.html");
         AjaxFormSubmit page = new AjaxFormSubmit();
         page.setInputName("Test User");
@@ -169,7 +169,7 @@ public class Tests {
     }
 
     @Test
-    public void selectDropDownTest(){
+    public void selectDropDown(){
         ChromeDriver.navigate(Page.getPage() + "basic-select-dropdown-demo.html");
         SelectDropDown page = new SelectDropDown();
         page.selectBtnClick();
