@@ -18,6 +18,61 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/main/java/pl/lodz/uni/math/ChromeDriver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/main/java/pl/lodz/uni/math/SingleInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/main/java/pl/lodz/uni/math/Test.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/main/java/pl/lodz/uni/math/jBehave/seleniumeasy/SingleInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/main/java/pl/lodz/uni/math/seleniumeasy/SingleInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/main/java/seleniumeasy/SingleInputForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/test/java/Tests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/test/java/pl/lodz/uni/math/seleniumeasy/Page.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/test/java/pl/lodz/uni/math/seleniumeasy/SingleInputFormTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../jBehave/src/test/java/pl/lodz/uni/math/seleniumeasy/Tests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
@@ -184,6 +239,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/pl/math/uni/lodz/pl/pageObject/Tests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../seleniumjBehave/pom.xml">
           <value>
             <set />
           </value>
